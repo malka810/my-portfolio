@@ -23,7 +23,7 @@ const Home = () => {
     
     <div className="w-full h-full rounded-full overflow-hidden border-[2px] sm:border-[3px] border-white/20">
       <img
-        src="src/assets/images/my-profile.png"
+        src="/images/my-profile.png"
         alt="Profile"
         className="object-cover w-full h-full rounded-full opacity-80 hover:opacity-100 transition-opacity duration-700 ease-in-out"
       />
