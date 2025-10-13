@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Nav from "./components/Navbar";
 import Footer from "./components/Footer";
 import WelcomePage from "./components/WelcomePage";
-import SectionDivider from "./components/SectionDivider";
+import SectionDivider from "./components/SectionDividerAnimated";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "@emailjs/browser"; // ✅ Make sure you installed: npm install @emailjs/browser
@@ -15,6 +15,7 @@ import Skill from "./pages/Skill";
 import Project from "./pages/Project";
 import Education from "./pages/Education";
 import Contact from "./pages/Contact";
+import SectionDividerAnimated from "./components/SectionDividerAnimated";
 
 
 const App = () => {
@@ -40,17 +41,24 @@ const App = () => {
           <div className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white">
             <Home />
 
-            {/* Divider */}
-            <SectionDivider />
-<About/>
+           <SectionDividerAnimated />
+             <About/>
 
-<Skill/>
 
-<Project/>
+           <SectionDividerAnimated />
 
-<Education/>
+             <Skill/>
+
+         <SectionDividerAnimated />
+
+              <Project/>
+
+          <SectionDividerAnimated />
+
+             <Education/>
+              <SectionDividerAnimated />
  
-<Contact/>
+              <Contact/>
           </div>
 
           {/* Footer */}
