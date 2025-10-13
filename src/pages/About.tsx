@@ -77,7 +77,7 @@ const About = () => {
       "
     />
 
-    {/* Floating Balls */}
+    
     <div className="absolute top-0 left-0 w-7 h-7 bg-indigo-400 opacity-20 animate-float-slow -translate-x-6 -translate-y-6 shadow-lg animate-spin "></div>
     <div className="absolute bottom-0 right-0 w-8 h-8 bg-indigo-300 opacity-20 animate-float-slower translate-x-6 translate-y-6 shadow-lg "></div>
     <div className="absolute top-1/2 left-1/2 w-9 h-9 bg-indigo-300 opacity-20 animate-float-slow -translate-x-1/2 -translate-y-1/2 shadow-lg "></div>

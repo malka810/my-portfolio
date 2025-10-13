@@ -68,7 +68,7 @@ const renderSkills = (skills: SkillItem[]) =>
       data-aos="fade-up"
       className="py-16 px-6 text-white text-center"
     >
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse font-semibold">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
         My Skills
       </h2>
 

@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import Nav from "./components/Navbar";
 import Footer from "./components/Footer";
 import WelcomePage from "./components/WelcomePage";
-import SectionDivider from "./components/SectionDividerAnimated";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import emailjs from "@emailjs/browser"; // ✅ Make sure you installed: npm install @emailjs/browser
 import "./App.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'boxicons/css/boxicons.min.css';
@@ -61,7 +59,7 @@ const App = () => {
               <Contact/>
           </div>
 
-          {/* Footer */}
+        
           <Footer />
         </>
       )}
