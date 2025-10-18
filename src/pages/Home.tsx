@@ -2,6 +2,7 @@ import "../App.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'boxicons/css/boxicons.min.css';
 import "aos/dist/aos.css";
+import profile from "../assets/images/my-profile.png";
 
 const Home = () => {
   return (
@@ -22,12 +23,12 @@ const Home = () => {
   <div className="relative w-full h-full mt-2 rounded-full p-[8px] sm:p-[10px] bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-400 shadow-[0_0_40px_rgba(99,102,241,0.4)] hover:shadow-[0_0_60px_rgba(139,92,246,0.7)] transition-all duration-700 transform hover:scale-105 opacity-70">
     
     <div className="w-full h-full rounded-full overflow-hidden border-[2px] sm:border-[3px] border-white/20">
-      <img
-        src="/images/my-profile.png"
-        alt="Profile"
-        className="object-cover w-full h-full rounded-full opacity-80 hover:opacity-100 transition-opacity duration-700 ease-in-out"
-      />
-    </div>
+        <img
+          src={profile}
+          alt="Profile"
+          className="object-cover w-full h-full rounded-full opacity-80 hover:opacity-100 transition-opacity duration-700 ease-in-out"
+        />
+      </div>
   </div>
 </div>
 </div>
