@@ -1,5 +1,6 @@
 import React from "react";
 import "aos/dist/aos.css";
+import educationBg from "../assets/images/education-bg.mp4";
 
 type EducationType = {
   title: string;
@@ -7,7 +8,6 @@ type EducationType = {
   period: string;
   description: string;
   highlights?: string[];
- 
 };
 
 type ActivityType = {
@@ -20,7 +20,7 @@ type ActivityType = {
 
 const educationData: EducationType[] = [
   {
-    title: "Diploma in Software Engineering",
+    title: "Higher National Diploma in Software Engineering",
     institution: "Institute of Software Engineering (IJSE)",
     period: "2023 - 2025",
     description:
@@ -30,7 +30,6 @@ const educationData: EducationType[] = [
       "Strategic Growth Analysis for a UK-Based E-Commerce Retailer (Group Project) | Python, Pandas, NumPy, Matplotlib, Seaborn",
       "Technologies: HTML, CSS, JavaScript, TypeScript, Spring Boot, React",
     ],
-
   },
   {
     title: "Certificates",
@@ -42,7 +41,6 @@ const educationData: EducationType[] = [
       "Certificate in English Spoken (2017-2018)",
       "Certificate in Computer Literacy (2021)",
     ],
-
   },
   {
     title: "G.C.E O/L & A/L",
@@ -50,7 +48,6 @@ const educationData: EducationType[] = [
     period: "",
     description:
       "Stream: Science | Subjects: Biology, Chemistry, Agriculture. Participated in school clubs and events, building leadership and teamwork skills.",
-
   },
 ];
 
@@ -79,29 +76,35 @@ const Education: React.FC = () => {
   return (
     <section
       id="education"
-      className="min-h-screen flex flex-col items-center justify-center text-white py-20 px-6"
+      className="relative min-h-screen flex flex-col items-center justify-center text-white py-20 px-6 overflow-hidden"
       data-aos="fade-up"
     >
-      <h2
-  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse text-left w-full pr-6 md:pr-16"
->
-  My Education & Activities
-</h2>
+   
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-5 -z-10"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src={educationBg} type="video/mp4" />
+      </video>
 
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse text-left w-full pr-6 md:pr-16">
+        My Education & Activities
+      </h2>
 
       <div className="max-w-3xl w-full relative border-l-2 border-gray-700 pl-6 space-y-10">
         {educationData.map((edu, i) => (
           <div key={i} className="relative">
-            <span
-              className={`absolute -left-4 top-2 w-4 h-4 rounded-full bg-400`}
-            ></span>
+            <span className="absolute -left-4 top-2 w-4 h-4 "></span>
             <p className="text-gray-400 font-medium">
               <span className="font-semibold text-white">{edu.title}</span>{" "}
-              {edu.period && <span className={`text-400`}>| {edu.period}</span>}
+              {edu.period && (
+                <span className="text-white">| {edu.period}</span>
+              )}
             </p>
-            <h3 className={`text-xl font-semibold mt-1 `}>
-              {edu.institution}
-            </h3>
+            <h3 className="text-xl font-semibold mt-1">{edu.institution}</h3>
             <p className="text-gray-400 mt-2">{edu.description}</p>
             {edu.highlights && (
               <ul className="list-disc ml-5 mt-2 text-gray-400 text-sm space-y-1">
@@ -114,8 +117,9 @@ const Education: React.FC = () => {
         ))}
       </div>
 
+      {/* 🌟 Extracurricular Activities */}
       <div className="max-w-3xl w-full mt-16 relative border-l-2 border-gray-700 pl-6 space-y-8">
-        <h3 className="text-3xl font-semibold mb-6 text-indigo-400 text-center">
+        <h3 className="text-3xl font-semibold mb-6 text-indigo-400 text-center border-b-2 border-indigo-400 pb-4 w-fit mx-auto">
           Extracurricular Activities
         </h3>
         {activitiesData.map((act, i) => (

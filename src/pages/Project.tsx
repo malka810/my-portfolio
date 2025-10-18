@@ -1,5 +1,6 @@
 import React from "react";
 import "aos/dist/aos.css";
+import attendo from "../assets/images/attendo.png";
 
 type ProjectType = {
   title: string;
@@ -35,7 +36,7 @@ const projects: ProjectType[] = [
   },
   {
     title: "Mobile Attendance Tracker",
-    img: "src/assets/images/attendo.png",
+    img: attendo,
     link: "https://github.com/malka810/Mobile-Attendance-Tracker.git",
     tools: ["React Native", "Firebase", "FCM", "GPS"],
   },
@@ -56,8 +57,8 @@ const Project: React.FC = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group relative rounded-3xl overflow-hidden backdrop-blur-lg bg-white/5 border border-white/10 shadow-lg hover:shadow-indigo-500/40 transition-all duration-500 hover:scale-105"
-            data-aos="zoom-in"
+            className="group relative rounded-3xl overflow-hidden backdrop-blur-lg bg-white/5 border border-white/10 shadow-lg hover:shadow-indigo-500/40 transition-all duration-500 hover:scale-105 "
+            data-aos="zoom-out-left"
           >
             <div className="overflow-hidden">
               <img

@@ -1,5 +1,6 @@
 import "../App.css";
 import "aos/dist/aos.css";
+import beautiful from "../assets/images/beautiful.png";
 
 const About = () => {
   return (
@@ -54,7 +55,7 @@ const About = () => {
     transform transition-transform duration-700 hover:scale-105">
 
     <img
-      src="src/assets/images/beautiful.png"
+      src={beautiful}
       alt="Malka Samarakoon"
       className="
         w-40 h-52 sm:w-56 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-80 xl:h-96

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 
 type SkillItem = {
@@ -6,119 +6,117 @@ type SkillItem = {
   name: string;
 };
 
+type SkillCategory = {
+  title: string;
+  skills: SkillItem[];
+};
+
 const Skill: React.FC = () => {
-  const programmingSkills: SkillItem[] = [
-    { icon: "fa-brands fa-java", name: "Java" },
-    { icon: "fa-brands fa-python", name: "Python" },
-    { icon: "fa-brands fa-js", name: "JavaScript" },
-    { icon: "fa-brands fa-react", name: "React" },
-    { icon: "fa-brands fa-typo3", name: "TypeScript" },
-    { icon: "fa-solid fa-leaf", name: "Spring Boot" },
-    { icon: "fa-solid fa-code", name: "Java EE" },
+  const categories: SkillCategory[] = [
+    {
+      title: "Programming",
+      skills: [
+        { icon: "fa-brands fa-java", name: "Java" },
+        { icon: "fa-brands fa-python", name: "Python" },
+        { icon: "fa-brands fa-js", name: "JavaScript" },
+        { icon: "fa-brands fa-react", name: "React" },
+        { icon: "fa-brands fa-typo3", name: "TypeScript" },
+        { icon: "fa-solid fa-leaf", name: "Spring Boot" },
+        { icon: "fa-solid fa-code", name: "Java EE" },
+      ],
+    },
+    {
+      title: "Web Development",
+      skills: [
+        { icon: "fa-brands fa-html5", name: "HTML" },
+        { icon: "fa-brands fa-css3-alt", name: "CSS" },
+        { icon: "fa-brands fa-bootstrap", name: "Bootstrap" },
+        { icon: "fa-solid fa-wind", name: "Tailwind CSS" },
+        { icon: "fa-solid fa-file-code", name: "JSP" },
+      ],
+    },
+    {
+      title: "Databases",
+      skills: [
+        { icon: "fa-solid fa-database", name: "MySQL" },
+        { icon: "fa-solid fa-plug", name: "JDBC" },
+        { icon: "fa-solid fa-leaf", name: "MongoDB" },
+      ],
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: [{ icon: "fa-brands fa-docker", name: "Docker" }],
+    },
+    {
+      title: "Tools & Frameworks",
+      skills: [
+        { icon: "fa-brands fa-git-alt", name: "Git" },
+        { icon: "fa-brands fa-github", name: "GitHub" },
+        { icon: "fa-solid fa-diagram-project", name: "ModelMapper" },
+        { icon: "fa-solid fa-key", name: "JWT" },
+        { icon: "fa-solid fa-envelope", name: "Nodemailer" },
+        { icon: "fa-solid fa-paper-plane", name: "SendGrid" },
+      ],
+    },
   ];
 
-  const webSkills: SkillItem[] = [
-    { icon: "fa-brands fa-html5", name: "HTML" },
-    { icon: "fa-brands fa-css3-alt", name: "CSS" },
-    { icon: "fa-brands fa-bootstrap", name: "Bootstrap" },
-    { icon: "fa-solid fa-wind", name: "Tailwind CSS" },
-    { icon: "fa-solid fa-file-code", name: "JSP" },
-  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const databaseSkills: SkillItem[] = [
-    { icon: "fa-solid fa-database", name: "MySQL" },
-    { icon: "fa-solid fa-plug", name: "JDBC" },
-    { icon: "fa-solid fa-leaf", name: "MongoDB" },
-  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % categories.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [categories.length]);
 
-  const cloudSkills: SkillItem[] = [
-    { icon: "fa-brands fa-docker", name: "Docker" },
-  ];
-
-  const toolSkills: SkillItem[] = [
-    { icon: "fa-brands fa-git-alt", name: "Git" },
-    { icon: "fa-brands fa-github", name: "GitHub" },
-    { icon: "fa-solid fa-diagram-project", name: "ModelMapper" },
-    { icon: "fa-solid fa-key", name: "JWT" },
-    { icon: "fa-solid fa-envelope", name: "Nodemailer" },
-    { icon: "fa-solid fa-paper-plane", name: "SendGrid" },
-  ];
-
-const renderSkills = (skills: SkillItem[]) =>
-  skills.map((skill, i) => (
-    <div
-      key={i}
-      className="
-        flex flex-col items-center justify-center 
-        w-24 sm:w-28 md:w-32
-        gap-2
-        transition-transform
-      "
-    >
-      <i
-        className={`${skill.icon} text-indigo-400 text-3xl sm:text-4xl animate-jump`}
-      ></i>
-      <span className="text-sm sm:text-base text-center">{skill.name}</span>
-    </div>
-  ));
+  // 🔹 Render skills with bigger icons, more spacing, and glow
+  const renderSkills = (skills: SkillItem[]) =>
+    skills.map((skill, i) => (
+      <div
+        key={i}
+        className="flex flex-col items-center justify-center w-28 sm:w-32 md:w-36 gap-3 transition-transform duration-100 drop-shadow-[0_0_10px_rgba(99,102,241,0.6)] hover:drop-shadow-[0_0_20px_rgba(99,102,241,0.9)]"
+        data-aos="zoom-out-left"
+      >
+        <i
+          className={`${skill.icon} text-5xl sm:text-6xl md:text-7xl text-indigo-400 hover:scale-110 transition-transform]`}
+        ></i>
+        <span className="text-sm sm:text-base text-center mt-2">{skill.name}</span>
+      </div>
+    ));
 
   return (
     <section
       id="skill"
       data-aos="fade-up"
-      className="py-16 px-6 text-white text-center"
+      className="py-20 px-6 text-white text-center overflow-hidden relative"
     >
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
-        My Skills
-      </h2>
+          My Skills
+        </h2>
 
-      <div className="max-w-5xl mx-auto space-y-12">
+      <div className="max-w-5xl mx-auto">
+        <h3 className="text-3xl font-semibold mb-20 text-indigo-400 tracking-wide border-b-2 border-indigo-400 pb-4 w-fit mx-auto">
+          {categories[currentIndex].title}
+        </h3>
 
-        <div data-aos="fade-right" className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">What I’m Good At</h2>
-          <p className="text-gray-400">
-            I love learning and experimenting with new technologies. Here are
-            some of the major programming languages, frameworks, tools, and
-            platforms I have worked with.
-          </p>
+        <div
+          className="flex flex-wrap justify-center gap-6 sm:gap-8 opacity-100 transition-opacity duration-400 ease-in-out"
+          key={currentIndex}
+        >
+          {renderSkills(categories[currentIndex].skills)}
         </div>
+      </div>
 
-        <div data-aos="fade-up">
-          <h3 className="text-xl font-semibold mb-6 text-indigo-400">Programming</h3>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {renderSkills(programmingSkills)}
-          </div>
-        </div>
-
-        <div data-aos="fade-up">
-          <h3 className="text-xl font-semibold mb-6 text-indigo-400">Web Development</h3>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {renderSkills(webSkills)}
-          </div>
-        </div>
-
-
-        <div data-aos="fade-up">
-          <h3 className="text-xl font-semibold mb-6 text-indigo-400">Databases</h3>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {renderSkills(databaseSkills)}
-          </div>
-        </div>
-
-        <div data-aos="fade-up">
-          <h3 className="text-xl font-semibold mb-6 text-indigo-400">Cloud & DevOps</h3>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {renderSkills(cloudSkills)}
-          </div>
-        </div>
-
-        <div data-aos="fade-up">
-          <h3 className="text-xl font-semibold mb-6 text-indigo-400">Tools & Frameworks</h3>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            {renderSkills(toolSkills)}
-          </div>
-        </div>
-
+      <div className="absolute left-0 right-0 bottom-8 flex justify-center gap-3">
+        {categories.map((_, i) => (
+          <span
+            key={i}
+            onClick={() => setCurrentIndex(i)}
+            className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
+              i === currentIndex ? "bg-indigo-400 scale-110" : "bg-gray-500"
+            }`}
+          ></span>
+        ))}
       </div>
     </section>
   );
