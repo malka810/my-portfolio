@@ -10,7 +10,7 @@ const WelcomePage = ({ onGetStarted }: WelcomePageProps) => {
     <div
       className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-[#1a0d0d]"
     >
-     {/* Video Background */}
+   
 <video
   className="absolute inset-0 w-full h-full object-cover opacity-50"
   autoPlay
@@ -21,7 +21,6 @@ const WelcomePage = ({ onGetStarted }: WelcomePageProps) => {
 
 </video>
 
-{/* Optional Dark Overlay */}
 <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="absolute inset-0 bg-black opacity-50"></div>
