@@ -26,7 +26,7 @@ const Home = () => {
         <img
           src={profile}
           alt="Profile"
-          className="object-cover w-full h-full rounded-full opacity-80 hover:opacity-100 transition-opacity ease-in-out"
+          className="object-cover w-full h-full rounded-full opacity-80 hover:opacity-100 transition-opacity"
         />
       </div>
   </div>

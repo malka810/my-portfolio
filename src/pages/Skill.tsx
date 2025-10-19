@@ -69,7 +69,7 @@ const Skill: React.FC = () => {
     return () => clearInterval(interval);
   }, [categories.length]);
 
-  // 🔹 Render skills with bigger icons, more spacing, and glow
+
   const renderSkills = (skills: SkillItem[]) =>
     skills.map((skill, i) => (
       <div
