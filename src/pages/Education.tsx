@@ -81,7 +81,7 @@ const Education: React.FC = () => {
     >
    
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-5 -z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-7 -z-10"
         autoPlay
         loop
         muted
@@ -117,7 +117,6 @@ const Education: React.FC = () => {
         ))}
       </div>
 
-      {/* 🌟 Extracurricular Activities */}
       <div className="max-w-3xl w-full mt-16 relative border-l-2 border-gray-700 pl-6 space-y-8">
         <h3 className="text-3xl font-semibold mb-6 text-indigo-400 text-center border-b-2 border-indigo-400 pb-4 w-fit mx-auto">
           Extracurricular Activities
