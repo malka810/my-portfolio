@@ -69,7 +69,6 @@ const Skill: React.FC = () => {
     return () => clearInterval(interval);
   }, [categories.length]);
 
-
   const renderSkills = (skills: SkillItem[]) =>
     skills.map((skill, i) => (
       <div
@@ -78,7 +77,7 @@ const Skill: React.FC = () => {
         data-aos="zoom-out-left"
       >
         <i
-          className={`${skill.icon} text-5xl sm:text-6xl md:text-7xl text-indigo-400 hover:scale-110 transition-transform]`}
+          className={`${skill.icon} text-5xl sm:text-6xl md:text-7xl text-indigo-400 hover:scale-110 transition-transform`}
         ></i>
         <span className="text-sm sm:text-base text-center mt-2">{skill.name}</span>
       </div>
@@ -91,11 +90,11 @@ const Skill: React.FC = () => {
       className="py-20 px-6 text-white text-center overflow-hidden relative"
     >
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
-          My Skills
-        </h2>
+        My Skills
+      </h2>
 
       <div className="max-w-5xl mx-auto">
-        <h3 className="text-3xl font-semibold mb-20 text-indigo-400 tracking-wide border-b-2 border-indigo-400 pb-4 w-fit mx-auto">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-12 md:mb-20 text-indigo-400 tracking-wide border-b-2 border-indigo-400 pb-4 w-fit mx-auto bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
           {categories[currentIndex].title}
         </h3>
 
