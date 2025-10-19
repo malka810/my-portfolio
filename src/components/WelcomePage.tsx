@@ -53,7 +53,7 @@ const WelcomePage = ({ onGetStarted }: WelcomePageProps) => {
        <h1
   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins tracking-wide leading-tight animate-gradient-text mb-20 text-white"
 >
-  A Journey Through My Work & Passion
+  Exploring the Art of Creation
 </h1>
 
 
@@ -64,7 +64,7 @@ const WelcomePage = ({ onGetStarted }: WelcomePageProps) => {
     px-4 sm:px-6 md:px-8 py-2 sm:py-3
     border border-indigo-400 text-white font-semibold rounded-2xl
     shadow-md transition-all duration-500 ease-in-out
-    hover:bg-indigo-500 hover:opacity-15 hover:text-white hover:shadow-lg hover:scale-105
+    hover:bg-indigo-400 hover:opacity-15 hover:text-indigo-950 hover:shadow-lg hover:scale-105
     active:scale-95
     text-sm sm:text-base md:text-lg
   "
