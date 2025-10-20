@@ -38,7 +38,9 @@ const Home = () => {
   data-aos="fade-left"
 >
 
-  <h3 className="text-sm sm:text-base md:text-lg text-gray-300">Hello there!</h3>
+  <h3 className="text-lg sm:text-xl md:text-2xl text-gray-300 font-medium">
+          Hello there!
+        </h3>
   <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mt-1 sm:mt-2 animate-pulse">
     Malka Samarakoon
   </h1>
@@ -91,7 +93,7 @@ const Home = () => {
       Download CV
     </a>
   </div>
-</div>
+</div>  
 
     </section>
   );
