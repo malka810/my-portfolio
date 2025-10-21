@@ -14,7 +14,7 @@ const Home = () => {
       className="min-h-screen flex flex-col md:flex-row items-center justify-center text-white px-4 sm:px-8 md:px-16 lg:px-24 scroll-mt-16"
     >
        <div
-        className="flex justify-center md:justify-start md:w-1/2 mb-6 md:mb-0 mt-4 md:mt-8 animate-bounce-slow md:pl-10 lg:pl-16"
+        className="flex justify-center md:justify-start md:w-1/2 mb-6 md:mb-0 mt-12 sm:mt-14 md:mt-8 animate-bounce-slow md:pl-10 lg:pl-16"
         data-aos="fade-right"
         data-aos-duration="1000"
       >
