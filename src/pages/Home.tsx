@@ -32,7 +32,7 @@ const Home = () => {
         <img
           src={isHovered ? profileHover : profile}
           alt="Profile"
-          className="object-cover w-full h-full rounded-full opacity-90 hover:opacity-100 transition-all duration-500 transform hover:scale-105"
+          className="object-cover w-full h-full rounded-full opacity-90 hover:opacity-100 transition-all transform hover:scale-105"
         />
       </div>
     </div>

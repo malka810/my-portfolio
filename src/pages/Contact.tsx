@@ -54,8 +54,7 @@ const Contact = () => {
         
 
       <p className="text-gray-300 text-center max-w-2xl mb-10">
-        Let’s connect! Whether you have a question, want to collaborate,
-        or just want to say hi — feel free to drop me a message below 👇
+        Let’s connect! I’m always open to new opportunities and conversations.
       </p>
 
       <form
