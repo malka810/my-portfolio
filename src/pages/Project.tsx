@@ -49,7 +49,7 @@ const Project: React.FC = () => {
       className="min-h-screen flex flex-col items-center justify-center text-white py-20 px-6 bg-black"
       data-aos="fade-up"
     >
-     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
+    <h2 className="text-4xl sm:p-5 sm:text-5xl md:text-6xl lg:text-7xl sm:text-left mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 font-semibold animate-pulse drop-shadow-[0_0_10px_rgba(168,85,247,0.8) border-b-4">
           My Projects
         </h2>
 

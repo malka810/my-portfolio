@@ -48,9 +48,10 @@ const Contact = () => {
       className="min-h-screen flex flex-col items-center justify-center text-white py-20 px-6"
       data-aos="fade-up"
     >
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
-          Contact me
+        <h2 className="text-4xl sm:p-5 sm:text-5xl md:text-6xl lg:text-7xl sm:text-left mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 font-semibold animate-pulse drop-shadow-[0_0_10px_rgba(168,85,247,0.8) border-b-4">
+          Contact Me
         </h2>
+        
 
       <p className="text-gray-300 text-center max-w-2xl mb-10">
         Let’s connect! Whether you have a question, want to collaborate,

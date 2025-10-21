@@ -90,9 +90,10 @@ const Education: React.FC = () => {
         <source src={educationBg} type="video/mp4" />
       </video>
 
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-12 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse text-left w-full pr-6 md:pr-16">
-        My Education & Activities
-      </h2>
+       <h2 className="text-4xl sm:p-5 sm:text-5xl md:text-6xl lg:text-7xl sm:text-left mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 font-semibold animate-pulse drop-shadow-[0_0_10px_rgba(168,85,247,0.8) border-b-4">
+           My Education & Activities
+        </h2>
+
 
       <div className="max-w-3xl w-full relative border-l-2 border-gray-700 pl-6 space-y-10">
         {educationData.map((edu, i) => (

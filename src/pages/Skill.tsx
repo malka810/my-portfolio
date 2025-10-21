@@ -89,9 +89,10 @@ const Skill: React.FC = () => {
       data-aos="fade-up"
       className="py-20 px-6 text-white text-center overflow-hidden relative"
     >
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
-        My Skills
-      </h2>
+       <h2 className="text-4xl sm:p-5 sm:text-5xl md:text-6xl lg:text-7xl sm:text-left mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 font-semibold animate-pulse drop-shadow-[0_0_10px_rgba(168,85,247,0.8) border-b-4">
+          My Skills
+        </h2>
+
 
       <div className="max-w-5xl mx-auto">
         <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-12 md:mb-20 text-indigo-400 tracking-wide border-b-2 border-indigo-400 pb-4 w-fit mx-auto bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">

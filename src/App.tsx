@@ -29,7 +29,7 @@ const App = () => {
 
 
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       {showWelcome ? (
         <WelcomePage onGetStarted={() => setShowWelcome(false)} />
       ) : (

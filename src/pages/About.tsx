@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-6 md:px-16 py-16 overflow-hidden"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-6 md:px-16 py-16 overflow-x-hidden"
       data-aos="fade-up"
     >
 
@@ -15,34 +15,67 @@ const About = () => {
         data-aos="fade-right"
         data-aos-delay="200"
       >
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 animate-pulse">
+        <h2 className="text-4xl sm:p-5 sm:text-5xl md:text-6xl lg:text-7xl sm:text-left mb-6 md:mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 font-semibold animate-pulse drop-shadow-[0_0_10px_rgba(168,85,247,0.8) border-b-4">
           About Me
         </h2>
 
-        <ul className="mb-6 space-y-2 text-gray-400 text-sm sm:text-base md:text-lg ">
-          <li><strong>Name:</strong> Malka Samarakoon</li>
-          <li><strong>University:</strong> Institute of Software Engineering (IJSE)</li>
-          <li><strong>Current Status:</strong> Software Engineering Undergraduate Student</li>
-          <li><strong>Year of Study:</strong> 2023/2025</li>
-        </ul>
+       <ul className="mb-6 space-y-2 text-gray-400 text-sm md:text-lg mx-auto text-left w-fit">
+  <li className="flex items-start gap-2">
+    <i className="fa-solid fa-user text-indigo-500 mt-1"></i>
+    <span><strong>Name:</strong> Malka Samarakoon</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <i className="fa-solid fa-university text-indigo-500 mt-1"></i>
+    <span><strong>University:</strong> Institute of Software Engineering (IJSE)</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <i className="fa-solid fa-laptop-code text-indigo-500 mt-1"></i>
+    <span><strong>Current Status:</strong> Software Engineering Undergraduate Student</span>
+  </li>
+  <li className="flex items-start gap-2">
+    <i className="fa-solid fa-calendar text-indigo-500 mt-1"></i>
+    <span><strong>Year of Study:</strong> 2023/2025</span>
+  </li>
+</ul>
 
-        <p className="text-gray-400 mb-6 text-sm sm:text-base md:text-lg">
+
+        <p className="text-gray-400 sm:text-left mb-6 sm:p-2 sm:mb-5 text-sm sm:text-base md:text-lg">
           Hi, I'm a passionate software engineering undergraduate at the Institute of
           Software Engineering in Sri Lanka. With a keen interest in web development
           and AI, I'm excited to explore the world of software development.
         </p>
 
-        <div className="relative bg-black/40 p-4 sm:p-6 rounded-3xl border border-gray-700 shadow-lg glow-soft animate-pulse">
-          <h3 className="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Soft Skills</h3>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-sm sm:text-base md:text-lg">
-            <li>Problem Solving</li>
-            <li>Teamwork</li>
-            <li>Communication</li>
-            <li>Quick Learner</li>
-            <li>Planning & Management</li>
-            <li>Leadership</li>
-          </ul>
-        </div>
+        <div className="relative bg-black/40 p-4 sm:p-8 rounded-3xl border border-gray-700 shadow-lg glow-soft animate-pulse">
+  <h3 className="text-xl sm:text-2xl font-semibold text-indigo-400 mb-4">Soft Skills</h3>
+
+  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base md:text-lg text-gray-300">
+    <li className="flex items-center gap-2">
+      <i className="bx bx-bulb text-pink-400 animate-pulse"></i>
+      Problem Solving
+    </li>
+    <li className="flex items-center gap-2">
+      <i className="bx bx-group text-purple-400 animate-pulse"></i>
+      Teamwork
+    </li>
+    <li className="flex items-center gap-2">
+      <i className="bx bx-chat text-blue-400 animate-pulse"></i>
+      Communication
+    </li>
+    <li className="flex items-center gap-2">
+      <i className="bx bx-brain text-indigo-400 animate-pulse"></i>
+      Quick Learner
+    </li>
+    <li className="flex items-center gap-2">
+      <i className="bx bx-calendar-check text-teal-400 animate-pulse"></i>
+      Planning & Management
+    </li>
+    <li className="flex items-center gap-2">
+      <i className="bx bx-crown text-yellow-400 animate-pulse"></i>
+      Leadership
+    </li>
+  </ul>
+</div>
+
       </div>
 
 

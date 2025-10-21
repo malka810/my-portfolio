@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleLinkClick = () => setIsOpen(false);
 
+  useEffect(() => {
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
+}, [isOpen]);
+
   return (
-    <nav className="fixed w-full z-50 shadow-md bg-gradient-to-br from-black via-gray-900 to-[#1a0d0d]">
+    <nav className="fixed w-full z-50 shadow-md bg-gradient-to-br from-black via-gray-900 to-[#1a0d0d] overflow-hidden">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16">
         
@@ -34,11 +38,12 @@ const Nav = () => {
         </div>
       </div>
 
-      <div
-        className={`md:hidden fixed top-14 sm:top-16 left-0 w-full bg-gradient-to-br from-black via-gray-900 to-[#1a0d0d] transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
+     <div
+  className={`md:hidden fixed top-[3.5rem] sm:top-[4rem] left-0 w-full bg-gradient-to-br from-black via-gray-900 to-[#1a0d0d] transition-all duration-500 ease-in-out overflow-hidden ${
+    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+  }`}
+>
+
         <div className="flex flex-col items-center space-y-4 py-5 text-white font-medium text-base sm:text-lg">
           <a href="#home" onClick={handleLinkClick} className="hover:text-indigo-400">Home</a>
           <a href="#about" onClick={handleLinkClick} className="hover:text-indigo-400">About</a>
