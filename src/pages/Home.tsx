@@ -3,8 +3,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'boxicons/css/boxicons.min.css';
 import "aos/dist/aos.css";
 import profile from "../assets/images/my-profile.png";
+import profileHover from "../assets/images/hover-profile.png";
+import { useState } from "react";
 
 const Home = () => {
+   const [isHovered, setIsHovered] = useState(false);
   return (
     <section
       id="home"
@@ -15,22 +18,28 @@ const Home = () => {
         data-aos="fade-right"
         data-aos-duration="1000"
       >
-     <div className="relative mt-2 w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 flex items-center justify-center">
+  <div className="relative mt-2 w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 flex items-center justify-center">
 
   <div className="absolute top-6 left-8 w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-indigo-300 rounded-full blur-2xl opacity-40 animate-float-slow"></div>
   <div className="absolute bottom-4 right-8 w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-indigo-200 rounded-full blur-2xl opacity-40 animate-float"></div>
 
-  <div className="relative w-full h-full mt-2 rounded-full p-[8px] sm:p-[10px] bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-400 shadow-[0_0_40px_rgba(99,102,241,0.4)] hover:shadow-[0_0_60px_rgba(139,92,246,0.7)] transition-all duration-700 transform hover:scale-105 opacity-70">
-    
+
+  <div
+    className="relative w-full h-full mt-2 rounded-full p-[8px] sm:p-[10px] bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-400 shadow-[0_0_40px_rgba(99,102,241,0.4)] hover:shadow-[0_0_60px_rgba(139,92,246,0.7)] transition-all duration-700 transform hover:scale-105 opacity-70"
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
+  >
+  
     <div className="w-full h-full rounded-full overflow-hidden border-[2px] sm:border-[3px] border-white/20">
-        <img
-          src={profile}
-          alt="Profile"
-          className="object-cover w-full h-full rounded-full opacity-80 hover:opacity-100 transition-opacity"
-        />
-      </div>
+      <img
+        src={isHovered ? profileHover : profile}
+        alt="Profile"
+        className="object-cover w-full h-full rounded-full opacity-80 hover:opacity-100 transition-opacity duration-500 transform hover:scale-105"
+      />
+    </div>
   </div>
 </div>
+
 </div>
 
       <div
