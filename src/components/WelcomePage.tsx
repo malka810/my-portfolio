@@ -1,4 +1,5 @@
 import "../App.css";
+import welcome from "../assets/images/welcome.mp4";
 
 
 type WelcomePageProps = {
@@ -17,7 +18,7 @@ const WelcomePage = ({ onGetStarted }: WelcomePageProps) => {
   loop
   muted
 >
-  <source src="src/assets/images/welcome.mp4" type="video/mp4" />
+  <source src={welcome} type="video/mp4" />
 
 </video>
 
