@@ -1,6 +1,7 @@
 import React from "react";
 import "aos/dist/aos.css";
 import attendo from "../assets/images/attendo.png";
+import learn5 from "../assets/images/learn5.png";
 
 type ProjectType = {
   title: string;
@@ -39,6 +40,12 @@ const projects: ProjectType[] = [
     img: attendo,
     link: "https://github.com/malka810/Mobile-Attendance-Tracker.git",
     tools: ["React Native", "Firebase", "FCM", "GPS"],
+  },
+  {
+    title: "Learn5 (Flutter Learning App)",
+    img: learn5,
+    link: "https://github.com/malka810/learn5.git",
+    tools: ["Flutter", "Firebase", "Dart", "Provider"],
   },
 ];
 
