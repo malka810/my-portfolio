@@ -70,6 +70,18 @@ const activitiesData: ActivityType[] = [
     organization: "IJSE",
     color: "white",
   },
+   {
+    year: "2013-2017",
+    role: "Athlete – School Athletic Team",
+    organization: "All Island Meets & Competitions",
+    color: "white",
+  },
+   {
+    year: "2019–2020",
+    role: "School Prefect",
+    organization: "Walala A/Rathnayake Central College",
+    color: "white",
+  },
 ];
 
 const Education: React.FC = () => {
